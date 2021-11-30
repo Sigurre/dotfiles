@@ -1,0 +1,8 @@
+alias 'la'=ls -a
+alias 'll'=ls -l
+alias 'clr'=clear
+alias 'nv'=nvim
+
+#Work aliases (uncomment to enable)
+#alias 'sfpr'=swe flow pr create --draft --yes
+#alias 'sfprm=swe flow pr merge

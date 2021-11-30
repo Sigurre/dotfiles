@@ -1,0 +1,25 @@
+# install.conf.yaml
+# See https://josnun.github.io/posts/managing-dotfiles-and-zsh-with-dotbot-and-antigen/
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    # Shell stuff
+    ~/.aliases: shell/.aliases
+    ~/.functions: shell/.functions
+    ~/.zshrc: shell/.zshrc
+    ~/.tmux.conf: shell/.tmux.conf
+    #NeoVim
+    ~/.config/nvim/init.vim: nvvim/.init.vim
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)", Installing HomeBrew]
+  - [echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile, Adding brew to PATH]
+  -[eval "$(/opt/homebrew/bin/brew shellenv)", Adding brew to PATH Part Two]
+  - [curl -L git.io/antigen > antigen.zsh, Installing Antigen]
+  - [brew install neovim, Installing NeoVim]
+  - [brew install tmux, Installing tmux]
