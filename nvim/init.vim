@@ -2,9 +2,12 @@
 " Enable vim-plug https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 
-"NerdTree
-Plug 'preservim/nerdtree'
+" NerdTree
+Plug 'preservim/nerdtree' |
+            \ Plug 'Xuyuanp/nerdtree-git-plugin'
 
+" Onehalf theme https://github.com/sonph/onehalf/tree/master/vim
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 " vim-commentary https://github.com/tpope/vim-commentary
 " Type gcc to comment out a line 
 Plug 'tpope/vim-commentary'
@@ -12,11 +15,19 @@ Plug 'tpope/vim-commentary'
 " Python pep8 indent https://github.com/Vimjas/vim-python-pep8-indent
 Plug 'Vimjas/vim-python-pep8-indent'
 
+" FZF: Fuzz file search
+" See https://pragmaticpineapple.com/improving-vim-workflow-with-fzf/
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 " NerdTree
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p
+
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 " Hotkey to open/move to NERDTree:
 nnoremap <leader>n :NERDTreeFocus<CR>
@@ -24,6 +35,15 @@ nnoremap <leader>n :NERDTreeFocus<CR>
 " Readability/UI
 " enable syntax highlighting
 syntax enable
+
+" OneHalf Theme settings
+syntax on
+set t_Co=256
+set cursorline
+colorscheme onehalfdark
+let g:airline_theme='onehalfdark'
+" lightline
+" let g:lightline = { 'colorscheme': 'onehalfdark' }
 
 "set tabs to triangles and spaces to dots
 "set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
@@ -84,6 +104,9 @@ set hlsearch
 
 " Python
 let python_highlight_all = 1
+
+" Source Vim configuration file and install plugins
+nnoremap <silent><leader>1 :source ~/.vimrc \| :PlugInstall<CR>
 
 " leader is comma instead of /
 "let mapleader = "\<SPACE>"

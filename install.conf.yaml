@@ -24,3 +24,7 @@
   - [brew install neovim, Installing NeoVim]
     #TODO get vim plug to autoinstall - [sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim', Installing vim-plug]
   - [brew install tmux, Installing tmux]
+    #See https://github.com/tonsky/FiraCode/wiki/Installing for info on fira-code
+  - [brew brew tap homebrew/cask-fonts && brew install --cask font-fira-code, Installing Fira Code Font]
+    #See https://github.com/ryanoasis/nerd-fonts for info on nerd font
+    #- [brew tap homebrew/cask-fonts && brew install --cask font-hack-nerd-font, Installing Nerd Font]

@@ -8,10 +8,10 @@ source ~/.functions
 
 antigen use oh-my-zsh # Yes, I want to use Oh My ZSH
 
-# Terminal stuff
+# Terminal stuff/plugins
 antigen bundle git
-antigen bundle jump
-antigen bundle web-search
+antigen bundle jump # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jump
+antigen bundle web-search # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search
 # The following bundles are from https://josnun.github.io/posts/managing-dotfiles-and-zsh-with-dotbot-and-antigen/
 # They're disabled until I can research them
 # antigen bundle zsh-users/zsh-history-substring-search
@@ -30,7 +30,16 @@ case `uname` in
 esac
 
 # Set the theme
-antigen theme theunraveler
+#antigen theme dpoggi
+#antigen theme jonathan
+#antigen theme kolo
+#antigen theme minimal
+#antigen theme pygmalion
+#https://github.com/spaceship-prompt/spaceship-prompt
+antigen theme spaceship-prompt/spaceship-prompt
+#https://github.com/geometry-zsh/geometry
+#antigen theme geometry-zsh/geometry
+#antigen theme theunraveler
 
 # And lastly, apply the Antigen stuff
 antigen apply
