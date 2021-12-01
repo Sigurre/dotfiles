@@ -2,7 +2,9 @@ alias 'la'=ls -a
 alias 'll'=ls -l
 alias 'clr'=clear
 alias 'nv'=nvim
+#Grep "here"
+alias 'gh'=grep -rnw '.' -e
 
 #Work aliases (uncomment to enable)
-#alias 'sfpr'=swe flow pr create --draft --yes
-#alias 'sfprm=swe flow pr merge
+alias 'sfpr'=swe flow pr create --draft --yes
+alias 'sfprm'=swe flow pr merge

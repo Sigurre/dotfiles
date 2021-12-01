@@ -2,6 +2,9 @@
 " Enable vim-plug https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 
+"NerdTree
+Plug 'preservim/nerdtree'
+
 " vim-commentary https://github.com/tpope/vim-commentary
 " Type gcc to comment out a line 
 Plug 'tpope/vim-commentary'
@@ -11,7 +14,14 @@ Plug 'Vimjas/vim-python-pep8-indent'
 
 call plug#end()
 
-" Readability/UI {{{
+" NerdTree
+" Start NERDTree and put the cursor back in the other window.
+autocmd VimEnter * NERDTree | wincmd p
+
+" Hotkey to open/move to NERDTree:
+nnoremap <leader>n :NERDTreeFocus<CR>
+
+" Readability/UI
 " enable syntax highlighting
 syntax enable
 
@@ -76,7 +86,7 @@ set hlsearch
 let python_highlight_all = 1
 
 " leader is comma instead of /
-let mapleader=","                  
+"let mapleader = "\<SPACE>"
 
 " jk is ESC (uncomment to activate)
 " inoremap jk <esc>
