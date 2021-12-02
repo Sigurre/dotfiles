@@ -9,16 +9,33 @@ Plug 'preservim/nerdtree' |
 " Onehalf theme https://github.com/sonph/onehalf/tree/master/vim
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 " vim-commentary https://github.com/tpope/vim-commentary
-" Type gcc to comment out a line 
+" Type gcc to comment out a line
 Plug 'tpope/vim-commentary'
 
 " Python pep8 indent https://github.com/Vimjas/vim-python-pep8-indent
 Plug 'Vimjas/vim-python-pep8-indent'
 
-" FZF: Fuzz file search
+" FZF: Fuzzy file search
 " See https://pragmaticpineapple.com/improving-vim-workflow-with-fzf/
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+" Git-Gutter (add diff symbols in the sign column)
+Plug 'airblade/vim-gitgutter'
+
+" Syntastic
+Plug 'scrooloose/syntastic'
+
+" Airline
+" See https://vimawesome.com/plugin/vim-airline-superman for more info
+Plug 'vim-airline/vim-airline'
+
+" ALE Linting
+" See https://vimawesome.com/plugin/ale for more info
+Plug 'dense-analysis/ale'
+
+" Trailing whitespace highlighter
+Plug 'ntpeters/vim-better-whitespace'
 
 call plug#end()
 
@@ -32,9 +49,23 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 " Hotkey to open/move to NERDTree:
 nnoremap <leader>n :NERDTreeFocus<CR>
 
+" Syntastic configs
+" See https://vimawesome.com/plugin/syntastic for more info
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 " Readability/UI
 " enable syntax highlighting
 syntax enable
+
+" Syntax highlighting for groovy/Jenkins
+autocmd BufNewFile,BufRead Jenkinsfile set syntax=groovy
 
 " OneHalf Theme settings
 syntax on
@@ -90,6 +121,9 @@ set wildmenu
 " when using the >> or << commands, shift lines by 4 spaces
 "set shiftwidth=4
 
+" Update every second (default 4000 -> this is for git gutter updating)
+set updatetime=1000
+
 " show a visual line under the cursor's current line
 set cursorline
 
@@ -114,5 +148,3 @@ nnoremap <silent><leader>1 :source ~/.vimrc \| :PlugInstall<CR>
 " jk is ESC (uncomment to activate)
 " inoremap jk <esc>
 
-"set modelines to check the end of the file
-set modelines=1
