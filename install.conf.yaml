@@ -28,3 +28,4 @@
   - [brew brew tap homebrew/cask-fonts && brew install --cask font-fira-code, Installing Fira Code Font]
     #See https://github.com/ryanoasis/nerd-fonts for info on nerd font
     #- [brew tap homebrew/cask-fonts && brew install --cask font-hack-nerd-font, Installing Nerd Font]
+  - [brew install the_silver_searcher, Installing Silver Searcher]
