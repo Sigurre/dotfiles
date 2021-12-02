@@ -4,6 +4,7 @@ alias 'clr'=clear
 alias 'nv'=nvim
 alias 'vim'=nvim
 alias 'vi'nvim
+alias 'jp'=jump
 #Grep "here"
 alias 'gh'=grep -rnw '.' -e
 
