@@ -44,3 +44,5 @@ antigen theme spaceship-prompt/spaceship-prompt
 # And lastly, apply the Antigen stuff
 antigen apply
 
+# Export black
+export PATH="/Users/gaj/Library/Python/3.8/lib/python/site-packages/black:$PATH"
