@@ -6,12 +6,16 @@ source $ZSH_BASE/antigen.zsh # Load Antigen
 source ~/.aliases # Source some extra files
 source ~/.functions
 
+#Change the visual editor to neovim
+export VISUAL=nvim;
+export EDITOR=nvim;
 antigen use oh-my-zsh # Yes, I want to use Oh My ZSH
 
 # Terminal stuff/plugins
 antigen bundle git
 antigen bundle jump # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jump
 antigen bundle web-search # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search
+antigen bundle python #https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/python
 # The following bundles are from https://josnun.github.io/posts/managing-dotfiles-and-zsh-with-dotbot-and-antigen/
 # They're disabled until I can research them
 # antigen bundle zsh-users/zsh-history-substring-search
