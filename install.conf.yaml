@@ -13,6 +13,8 @@
     ~/.functions: shell/.functions
     ~/.zshrc: shell/.zshrc
     ~/.tmux.conf: shell/.tmux.conf
+    # Antigen
+    ~/.antigenrc: shell/.antigenrc
     # NeoVim
     ~/.config/nvim/init.vim: nvim/init.vim
     # Ranger
