@@ -11,6 +11,3 @@ source ~/.antigenrc
 #Change the visual editor to neovim
 export VISUAL=nvim;
 export EDITOR=nvim;
-
-# Export black
-export PATH="/Users/gaj/Library/Python/3.8/lib/python/site-packages/black:$PATH"
