@@ -1,7 +1,4 @@
 # .zshrc
-ZSH_BASE=$HOME/.dotfiles # Base directory for ZSH configuration
-
-source $ZSH_BASE/antigen.zsh # Load Antigen
 # Load Antigen config
 source ~/.antigenrc
 

@@ -1,11 +1,13 @@
+# Load Antigen
+# This requires the .dotfiles repo to be in the home directory
+source $HOME/.dotfiles/antigen.zsh
 antigen use oh-my-zsh # Yes, I want to use Oh My ZSH
-
 # Terminal stuff/plugins
 antigen bundle git
 antigen bundle jump # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jump
 antigen bundle web-search # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search
 antigen bundle python #https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/python
-antigen bundle tmux
+atigen bundle tmux
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 case `uname` in
@@ -18,17 +20,7 @@ case `uname` in
   ;;
 esac
 
-# Set the theme
-#antigen theme dpoggi
-#antigen theme jonathan
-#antigen theme kolo
-#antigen theme minimal
-#antigen theme pygmalion
-#https://github.com/spaceship-prompt/spaceship-prompt
+# Set Antigen theme
 antigen theme spaceship-prompt/spaceship-prompt
-#https://github.com/geometry-zsh/geometry
-#antigen theme geometry-zsh/geometry
-#antigen theme theunraveler
-
 # And lastly, apply the Antigen stuff
 antigen apply
