@@ -7,7 +7,7 @@ antigen bundle git
 antigen bundle jump # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jump
 antigen bundle web-search # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search
 antigen bundle python #https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/python
-atigen bundle tmux
+antigen bundle tmux
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 case `uname` in
