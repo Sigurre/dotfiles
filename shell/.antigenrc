@@ -9,6 +9,7 @@ antigen bundle web-search # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugi
 antigen bundle python #https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/python
 antigen bundle tmux
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
 
 case `uname` in
   Darwin)
